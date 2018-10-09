@@ -1,7 +1,8 @@
-import * as React from 'react';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./App.css";
 
-import logo from './logo.svg';
+import logo from "./logo.svg";
 
 class App extends React.Component {
   public render() {
@@ -20,3 +21,25 @@ class App extends React.Component {
 }
 
 export default App;
+
+///////// React tutorial starter code
+
+class Game extends React.Component {
+  render() {
+    return (
+      <div className="game">
+        <div className="game-board">
+          <Board />
+        </div>
+        <div className="game-info">
+          <div>{/* status */}</div>
+          <ol>{/* TODO */}</ol>
+        </div>
+      </div>
+    );
+  }
+}
+
+// ========================================
+
+ReactDOM.render(<Game />, document.getElementById("root"));
